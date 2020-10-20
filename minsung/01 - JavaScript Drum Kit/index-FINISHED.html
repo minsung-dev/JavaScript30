@@ -60,9 +60,9 @@
     <script>
       function removeTransition(event) {
         if (event.propertyName !== 'transform') return;
-          console.log(event);
-          //event.target.classList.remove('playing');
-      }
+          //console.log(event);
+          event.target.classList.remove('playing');//event.target == 사건이 일어날 객체(div.key)
+          }
       function playSound(event){
         const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
         const key = document.querySelector(`div[data-key="${event.keyCode}"]`);
